@@ -332,7 +332,7 @@ async def extract_business(page):
     if not address:
         address = await first_text(
             page,
-            ['[data-item-id="address"]"],
+            ['[data-item-id="address"]'],
         )
 
     address = re.sub(
@@ -351,7 +351,7 @@ async def extract_business(page):
     if not phone:
         phone = await first_text(
             page,
-            ['[data-item-id^="phone:"]"],
+            ['[data-item-id^="phone:"]'],
         )
 
     phone = re.sub(
